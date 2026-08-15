@@ -19,8 +19,11 @@
 
 <style>
 /*======================================
-//--//-->   ABOUT
+//--//-->   ABOUT & GENERAL
 ======================================*/
+body {
+  overflow-x: hidden; /* Prevents mobile screen from swaying left-right */
+}
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -74,6 +77,34 @@
 }
 .zoom-effect:hover {
   transform: scale(1.1);
+}
+
+/* =====================================
+   MOBILE VIEW FIXES (No Edge Sticking)
+====================================== */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  #typing-animation {
+    font-size: 18px !important; /* Prevents text overflow */
+  }
+  .hero .text h1 {
+    font-size: 32px !important;
+  }
+  .resume-wrap {
+    margin-bottom: 30px; /* Space between resume cards */
+  }
+  .blog-entry {
+    margin-bottom: 30px; /* Space between project cards */
+  }
+  .about-info {
+    margin-top: 20px;
+  }
+  .skill-mf {
+    margin-top: 30px;
+  }
 }
 </style>
   </head>
@@ -159,7 +190,7 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/aboutmead.png (2)" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/aboutmead.png2.jpg" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<div class="col-sm-6 col-md-7">
