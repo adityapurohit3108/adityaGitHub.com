@@ -103,6 +103,9 @@ html, body {
   .resume-wrap, .blog-entry {
     margin-bottom: 30px; 
   }
+  .big-4 {
+    font-size: 28px !important; /* Fixed big heading going out of bounds */
+  }
 }
 </style>
   </head>
@@ -180,7 +183,6 @@ html, body {
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
-			<!-- FIXED: Removed the extra <div class="row"> that was causing horizontal stretch -->
 			<div class="row d-flex align-items-stretch">
 				<div class="col-md-6 col-lg-5 d-flex">
 					<div class="img-about img d-flex align-items-stretch">
@@ -270,8 +272,10 @@ html, body {
 
 		<!-- Experience Section -->
 		<div class="row">
-			<h1 class="big-4">Experience & Research</h1>
-			<div class="underline"></div>
+			<div class="col-md-12">
+				<h1 class="big-4">Experience & Research</h1>
+				<div class="underline"></div>
+			</div>
 		</div>
 		<br>
 		
@@ -311,8 +315,10 @@ html, body {
 
 		<!-- Education Section -->
 		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
+			<div class="col-md-12">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
 		</div>
 		<br>
 		
@@ -455,7 +461,6 @@ html, body {
       </div>
 	
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-	  	<!-- FIXED: Re-enabled the Container that was previously commented out, stopping horizontal spill -->
 	  	<div class="container"> 
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
