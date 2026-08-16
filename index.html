@@ -23,10 +23,9 @@
 ======================================*/
 html, body {
   max-width: 100vw;
-  overflow-x: hidden !important; /* Strict lock on horizontal scroll */
+  overflow-x: hidden !important; 
 }
 
-/* Ensuring no rows break out of the screen on mobile */
 .row {
   max-width: 100%;
   margin-left: 0px !important;
@@ -52,6 +51,7 @@ html, body {
   height: .7rem;
   background-color: #ffbd39;
 }
+
 /* Animation styles */
 #typing-animation {
   position: relative;
@@ -79,7 +79,7 @@ html, body {
   from { width: 5px; }
   to { width: 0; }
 }
-/* project image zoom effect */
+
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -88,7 +88,6 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Specific spacing for mobile screens to avoid edge-sticking */
 @media (max-width: 768px) {
   .container {
     padding-left: 20px !important;
@@ -104,7 +103,7 @@ html, body {
     margin-bottom: 30px; 
   }
   .big-4 {
-    font-size: 28px !important; /* Fixed big heading going out of bounds */
+    font-size: 28px !important; 
   }
 }
 </style>
@@ -131,20 +130,24 @@ html, body {
 	  </nav>
 
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
+		  <div class="home-slider owl-carousel">
+	       <div class="slider-item">
 	      	<div class="overlay"></div>
 	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/picsart.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+			  <!-- NEW LAYOUT: Left text, Right Image -->
+	          <div class="row d-flex align-items-center slider-text justify-content-between" style="min-height: 100vh;">
+                
+				<!-- RIGHT SIDE IMAGE (Hidden on Mobile with d-none d-md-block) -->
+                <div class="col-md-5 order-md-last d-none d-md-block ftco-animate text-center">
+                    <img src="images/picsart.png" class="img-fluid" alt="Aditya Purohit" style="max-height: 75vh; object-fit: contain;">
+                </div>
+
+                <!-- LEFT SIDE TEXT -->
+                <div class="col-md-7 d-flex align-items-center ftco-animate">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Aditya Purohit</span></h1>
 
-						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
@@ -359,7 +362,7 @@ html, body {
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="YOUR_RESUME_LINK_HERE" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -519,17 +522,24 @@ html, body {
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">Resume Link</a></p>
+	            <p><a href="YOUR_RESUME_LINK_HERE" target="_blank">Resume Link</a></p>
 	          </div>
           </div>
 
+		  <!-- GOOGLE FORM BUTTON RESTORED HERE -->
 		  <div class="container">
 			<br><br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://linkedin.com/in/adityapurohit0249"><span class="icon-linkedin"></span></a></li>  
-					</ul>
-				<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a <span>Question?</span> <a href="https://forms.gle/3EP52sWe5Kkwvg1Z9" class="btn btn-primary py-3 px-5" target="_blank">Click Here</a></h2>
+				</div>
+			</div>
+			<br>
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+				<li class="ftco-animate normal-txt">Find me on  </li>
+				<li class="ftco-animate"><a href="https://linkedin.com/in/adityapurohit0249"><span class="icon-linkedin"></span></a></li>  
+			</ul>
+			<br>
 		   </div>
    </div>
  </section>
